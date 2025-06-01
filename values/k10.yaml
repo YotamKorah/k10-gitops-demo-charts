@@ -95,3 +95,5 @@ route:
     enabled: true
 eula:
   accept: true
+  company: abra
+  email: not-real@abra-it.com
