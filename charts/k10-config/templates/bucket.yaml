@@ -1,0 +1,16 @@
+apiVersion: objectbucket.io/v1alpha1
+kind: ObjectBucketClaim
+metadata:
+  name: kasten-bucket
+  labels:
+    app: noobaa
+    bucket-provisioner: openshift-storage.noobaa.io-obc
+    noobaa-domain: openshift-storage.noobaa.io
+spec:
+  additionalConfig:
+    bucketclass: noobaa-default-bucket-class
+  bucketName: kasten-bucket
+  generateBucketName: kasten-bucket
+  objectBucketName: obc-kasten-io-kasten-bucket
+  storageClassName: openshift-storage.noobaa.io
+---
