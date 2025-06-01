@@ -101,4 +101,5 @@ prometheus:
   rbac:
     create: true
 route:
+  enabled: true
   host: kasten.apps.cluster-sndcx.sndcx.gcp.redhatworkshops.io
