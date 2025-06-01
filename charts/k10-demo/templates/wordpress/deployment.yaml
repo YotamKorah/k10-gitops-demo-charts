@@ -45,7 +45,6 @@ spec:
         - name: apache-ports-conf
           mountPath: /etc/apache2/ports.conf
           subpath: ports.conf
-          readOnly: true
       volumes:
       - name: wordpress-persistent-storage
         persistentVolumeClaim:
