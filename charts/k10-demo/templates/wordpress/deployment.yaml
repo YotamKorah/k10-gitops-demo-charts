@@ -20,10 +20,6 @@ spec:
       containers:
       - image: wordpress:6.2.1-apache
         name: wordpress
-        securityContext:   # This is what wglambert referring to 
-          sysctls:               # Will add a sysctl in variable to your container
-          - name: net.ipv4.ip_unprivileged_port_start   # You will modify the this parameter 
-            value: "0"
         env:
         - name: WORDPRESS_DB_HOST
           valueFrom:
@@ -46,7 +42,14 @@ spec:
         volumeMounts:
         - name: wordpress-persistent-storage
           mountPath: /var/www/html
+        - name: apache-ports-conf
+          mountPath: /etc/apache2/ports.conf
+          subpath: ports.conf
+          readOnly: true
       volumes:
       - name: wordpress-persistent-storage
         persistentVolumeClaim:
           claimName: wp-pv-claim
+      - name: apache-ports-conf
+        ConfigMap:
+          name: apache-ports-conf
