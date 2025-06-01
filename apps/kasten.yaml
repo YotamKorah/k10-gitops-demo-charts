@@ -1,0 +1,31 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: kasten
+spec:
+  destination:
+    namespace: kasten-io
+    server: https://kubernetes.default.svc
+  source:
+    path: ''
+    repoURL: ''
+    targetRevision: HEAD
+  sources:
+    - name: values
+      path: values
+      repoURL: https://github.com/YotamKorah/k10-gitops-demo-charts.git
+      targetRevision: main
+      ref: values
+    - name: kasten
+      repoURL: https://charts.kasten.io/
+      chart: k10
+      targetRevision: 8.0.0
+      helm:
+        valueFiles:
+          - values.yaml
+          - $values/values/k10.yaml
+  project: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
