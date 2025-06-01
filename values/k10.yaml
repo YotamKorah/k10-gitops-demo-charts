@@ -100,3 +100,5 @@ eula:
 prometheus:
   rbac:
     create: true
+route:
+  host: kasten.apps.cluster-sndcx.sndcx.gcp.redhatworkshops.io
