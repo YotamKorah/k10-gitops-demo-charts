@@ -1,6 +1,6 @@
 auth:
   openshift:
-    dashboardURL: 'https://k10-route-kasten-io.apps.cluster-sndcx.sndcx.gcp.redhatworkshops.io/k10/'
+    dashboardURL: 'https://kasten.apps.cluster-sndcx.sndcx.gcp.redhatworkshops.io/kasten/'
     enabled: true
     insecureCA: true
     openshiftURL: 'https://apiserver.openshift-kube-apiserver.svc.cluster.local'
