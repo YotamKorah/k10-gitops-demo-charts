@@ -1,2 +1,6 @@
 db:
   serverPassword: password
+
+wp:
+  existingSecret: mysql-params
+  host: wp.apps.cluster-sndcx.sndcx.gcp.redhatworkshops.io

@@ -1,2 +1,6 @@
 db:
   serverPassword: 
+
+wp:
+  existingSecret:
+  host:
