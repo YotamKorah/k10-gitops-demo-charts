@@ -103,3 +103,5 @@ prometheus:
 route:
   enabled: true
   host: kasten.apps.cluster-sndcx.sndcx.gcp.redhatworkshops.io
+  tls:
+    enabled: true
