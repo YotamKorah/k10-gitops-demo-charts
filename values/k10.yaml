@@ -97,3 +97,6 @@ eula:
   accept: true
   company: abra
   email: not-real@abra-it.com
+prometheus:
+  rbac:
+    create: true
