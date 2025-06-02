@@ -1,6 +1,0 @@
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: apache-ports-conf
-data:
-  ports.conf: "# If you just change the port or add more ports here, you will likely also\r\n# have to change the VirtualHost statement in\r\n# /etc/apache2/sites-enabled/000-default.conf\r\n\r\nListen 8000\r\n\r\n<IfModule ssl_module>\r\n        Listen 8443\r\n</IfModule>\r\n\r\n<IfModule mod_gnutls.c>\r\n        Listen 8443\r\n</IfModule>\r\n\r\n# vim: syntax=apache ts=4 sw=4 sts=4 sr noet\r\n"
