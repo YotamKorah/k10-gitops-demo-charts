@@ -36,6 +36,9 @@ autoscaling:
   targetCPUUtilizationPercentage: 80
   # targetMemoryUtilizationPercentage: 80
 
+route:
+  host:
+
 mongo:
   storage: 1Gi
   # Use plain text data, helm will 

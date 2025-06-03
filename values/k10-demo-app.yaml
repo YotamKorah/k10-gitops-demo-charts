@@ -1,6 +1,9 @@
 db:
   serverPassword: password
 
+route:
+  host: pacman.apps.cluster-sndcx.sndcx.gcp.redhatworkshops.io
+
 mongo:
   databaseName: 'pacman'
   databasePassword: 'pacman'
