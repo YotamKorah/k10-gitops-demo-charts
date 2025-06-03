@@ -36,6 +36,7 @@ spec:
       labels:
         kubevirt.io/domain: db
         kubevirt.io/size: small
+        app: db
     spec:
       architecture: amd64
       domain:
