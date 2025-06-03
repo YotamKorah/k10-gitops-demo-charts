@@ -19,7 +19,7 @@ spec:
     - name: kasten
       repoURL: https://charts.kasten.io/
       chart: k10
-      targetRevision: 8.0.0
+      targetRevision: 8.0.1
       helm:
         valueFiles:
           - values.yaml
