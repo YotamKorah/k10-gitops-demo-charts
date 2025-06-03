@@ -1,2 +1,7 @@
 db:
   serverPassword: password
+
+mongo:
+  databaseName: 'pacman'
+  databasePassword: 'pacman'
+  databaseUser: 'pacman'
