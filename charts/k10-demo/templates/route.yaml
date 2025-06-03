@@ -10,7 +10,7 @@ spec:
     termination: edge
     insecureEdgeTerminationPolicy: Redirect
     destinationCACertificate: ''
-  host: {{ .route.host }}
+  host: {{ .Valuse.route.host }}
   port:
     targetPort: http
   alternateBackends: []
