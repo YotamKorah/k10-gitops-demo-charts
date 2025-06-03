@@ -8,14 +8,14 @@ metadata:
     vm.kubevirt.io/template.namespace: openshift
     vm.kubevirt.io/template.revision: '1'
     vm.kubevirt.io/template.version: v0.29.4
-  name: db
+  name: db-{{ .Release.Name }}
 spec:
   dataVolumeTemplates:
     - apiVersion: cdi.kubevirt.io/v1beta1
       kind: DataVolume
       metadata:
         creationTimestamp: null
-        name: db
+        name: db-{{ .Release.Name }}
       spec:
         sourceRef:
           kind: DataSource
@@ -24,7 +24,7 @@ spec:
         storage:
           resources:
             requests:
-              storage: 60Gi
+              storage: 30Gi
   running: true
   template:
     metadata:
@@ -34,7 +34,7 @@ spec:
         vm.kubevirt.io/workload: server
       creationTimestamp: null
       labels:
-        kubevirt.io/domain: db
+        kubevirt.io/domain: db-{{ .Release.Name }}
         kubevirt.io/size: small
         app: db
     spec:
@@ -76,7 +76,7 @@ spec:
       terminationGracePeriodSeconds: 180
       volumes:
         - dataVolume:
-            name: db
+            name: db-{{ .Release.Name }}
           name: rootdisk
         - cloudInitNoCloud:
             userData: |
