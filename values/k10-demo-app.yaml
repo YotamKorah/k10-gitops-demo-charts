@@ -1,5 +1,5 @@
 db:
-  serverPassword: password123
+  serverPassword: password
 
 route:
   host: pacman.apps.cluster-sndcx.sndcx.gcp.redhatworkshops.io
